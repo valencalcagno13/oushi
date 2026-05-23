@@ -31,7 +31,7 @@ nav{
 .nav-links a{font-size:0.5rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(242,237,228,0.92);text-decoration:none;transition:color 0.2s;}
 .nav-links a:hover{color:var(--h);}
 
-/* ═══ HERO ═══ */
+/* âââ HERO âââ */
 .hero{
   height:100vh;background:var(--r);
   display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -50,7 +50,7 @@ nav{
 .arrow-line{width:1px;height:50px;background:linear-gradient(to bottom,rgba(242,237,228,0.25),transparent);animation:pulse 2s ease-in-out infinite;}
 @keyframes pulse{0%,100%{opacity:0.3;}50%{opacity:1;}}
 
-/* ═══ FRANCISCA + FORM ═══ */
+/* âââ FRANCISCA + FORM âââ */
 .fran-block{
   display:grid;grid-template-columns:1fr 1fr;
   border-bottom:1px solid var(--hm);
@@ -117,7 +117,7 @@ nav{
 .submit:hover{opacity:0.88;}
 .submit:disabled{opacity:0.4;cursor:not-allowed;}
 
-/* ═══ CANAL ═══ */
+/* âââ CANAL âââ */
 
 .canal-l,
 
@@ -133,7 +133,7 @@ nav{
 .dot-r{background:var(--r);}
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:0.1;}}
 
-/* ═══ HIFI ═══ */
+/* âââ HIFI âââ */
 .hifi{
   background:var(--r);
   padding:6rem 4rem;
@@ -260,27 +260,34 @@ footer{background:var(--h);padding:1.8rem 3.5rem;display:flex;justify-content:sp
       <img src="flyer.jpg" alt="Flyer" class="fran-img"
         onerror="this.style.display='none';document.getElementById('ph').style.display='flex'">
       <div class="fran-placeholder" id="ph" style="display:none;">
-        <div class="fran-ph-txt">FLYER<br>PRONTO</div>
-      </div>
-      <span class="fran-badge">Próxima edición</span>
+        <div class="fran-ph-txt">13 DE JUNIO<br>16HS</div>
+      
+      <div style="font-family:'Space Mono',monospace;font-size:0.78rem;line-height:2.2;margin:1.5rem 0;">
+        <div>14HS &mdash; MATT CIANFO <span style="opacity:0.5">selektor</span></div>
+        <div>16HS &mdash; EKATHÉ <span style="opacity:0.5">jazz band</span></div>
+        <div>17HS &mdash; CARLOS ALFONSÍN <span style="opacity:0.5">housemaster</span></div>
+        <div>18:30HS &mdash; VALENTINO CALCAGNO B2B COLAU <span style="opacity:0.5">vinyl set</span></div>
+        <div style="margin-top:0.8rem;opacity:0.6">+ FLASH TATTOO &middot; FERIA DE VINILOS</div>
+      </div></div>
+      <span class="fran-badge">PrÃ³xima ediciÃ³n</span>
     </div>
     <div class="fran-info">
       <span class="s-eye">Fiesta en</span>
-      <div class="s-title">FRANCISCA<br>DEL FUEGO</div>
-      <p class="s-body">Una vez por mes. Con OUSHI. Cultura analógica, música con criterio, sonido Hi-Fi y la mejor gente de Buenos Aires.</p>
+      <div class="s-title">LA NUBE</div>
+      <p class="s-body">Una vez por mes. Con OUSHI. Cultura analÃ³gica, mÃºsica con criterio, sonido Hi-Fi y la mejor gente de Buenos Aires.</p>
       <div class="sorteo">
-        <p class="sorteo-txt">Seguí a <strong>@narrowjeans</strong> en Instagram. Al final de la noche sorteamos una prenda entre todos los anotados con QR.</p>
+        <p class="sorteo-txt">SeguÃ­ a <strong>@narrowjeans</strong> en Instagram. Al final de la noche sorteamos una prenda entre todos los anotados con QR.</p>
       </div>
     </div>
   </div>
   <div class="fran-right">
     <span class="s-eye">Sorteo</span>
-    <div class="s-title">ANOTATE<br>A LA PRÓXIMA</div>
-    <p class="s-body">Dejá tus datos. Te mandamos un QR con tu número para la noche. Ese número entra al sorteo.</p>
+    <div class="s-title">ANOTATE<br>A LA PRÃXIMA</div>
+    <p class="s-body">DejÃ¡ tus datos. Te mandamos un QR con tu nÃºmero para la noche. Ese nÃºmero entra al sorteo.</p>
     <form class="form" onsubmit="return false" id="regForm">
       <div class="field">
         <label>Nombre completo</label>
-        <input type="text" id="nombre" placeholder="Cómo te llamás" required>
+        <input type="text" id="nombre" placeholder="CÃ³mo te llamÃ¡s" required>
       </div>
       <div class="field">
         <label>Instagram</label>
@@ -298,16 +305,16 @@ footer{background:var(--h);padding:1.8rem 3.5rem;display:flex;justify-content:sp
 <!-- CANAL -->
 <section id="canal" class="canal reveal">
   <div class="canal-top">
-    <span class="s-eye">02 — Canal de YouTube</span>
+    <span class="s-eye">02 â Canal de YouTube</span>
     <div class="s-title">DJ SETS<br>EN VIVO</div>
-    <p class="s-body">Grabamos sets de vinilo en casa. Sonido Hi-Fi real, sin edición, sin trampa. Una sesión que queda para siempre.</p>
+    <p class="s-body">Grabamos sets de vinilo en casa. Sonido Hi-Fi real, sin ediciÃ³n, sin trampa. Una sesiÃ³n que queda para siempre.</p>
     <a href="https://youtube.com/@oushiarchives" target="_blank" class="link link-r">
       <span class="dot dot-r"></span>Ver canal
     </a>
   </div>
   <div class="canal-bottom">
-    <span class="s-eye">03 — Entrevistas</span>
-    <div class="s-title">CULTURA<br>ANALÓGICA</div>
+    <span class="s-eye">03 â Entrevistas</span>
+    <div class="s-title">CULTURA<br>ANALÃGICA</div>
     <p class="s-body">Conversaciones con selectors, coleccionistas y artistas. Documentamos lo que vale la pena antes de que desaparezca.</p>
   </div>
 </section>
@@ -323,13 +330,13 @@ footer{background:var(--h);padding:1.8rem 3.5rem;display:flex;justify-content:sp
 <!-- MODAL -->
 <div class="modal" id="modal">
   <div class="modal-card">
-    <div class="mc-pre">Francisca del Fuego</div>
+    <div class="mc-pre">La Nube · Av. Costanera 2851</div>
     <div class="mc-title">OUSHI</div>
     <div class="mc-sub">Ahora sos parte de</div>
     <div class="mc-nombre" id="mcNombre"></div>
     <div class="mc-num" id="mcNum"></div>
     <div id="qrcode"></div>
-    <p class="mc-narrow">Seguí a <strong>@narrowjeans</strong> en Instagram.<br>Este número entra al sorteo de la noche.</p>
+    <p class="mc-narrow">SeguÃ­ a <strong>@narrowjeans</strong> en Instagram.<br>Este nÃºmero entra al sorteo de la noche.</p>
     <button class="mc-close" onclick="document.getElementById('modal').classList.remove('show')">LISTO</button>
   </div>
 </div>
@@ -347,18 +354,18 @@ document.getElementById('regForm').addEventListener('submit',async function(e){
   const numero=Math.floor(1000+Math.random()*9000);
   document.getElementById('qrcode').innerHTML='';
   new QRCode(document.getElementById('qrcode'),{
-    text:'OUSHI #'+numero+' — '+nombre,
+    text:'OUSHI #'+numero+' â '+nombre,
     width:155,height:155,
     colorDark:'#BE0F0F',colorLight:'#F2EDE4',
     correctLevel:QRCode.CorrectLevel.H
   });
   await new Promise(r=>setTimeout(r,500));
   document.getElementById('mcNombre').textContent=nombre.toUpperCase();
-  document.getElementById('mcNum').textContent='Número #'+numero;
+  document.getElementById('mcNum').textContent='NÃºmero #'+numero;
   document.getElementById('modal').classList.add('show');
   try{
     await emailjs.send('service_43fgln1','template_d7pa78j',{
-      nombre,email,instagram:instagram||'No indicó',numero:'#'+numero
+      nombre,email,instagram:instagram||'No indicÃ³',numero:'#'+numero
     });
   }catch(err){console.log(err);}
   btn.disabled=false;btn.textContent='MANDAME EL QR';
