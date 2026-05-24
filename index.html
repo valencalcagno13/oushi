@@ -104,9 +104,12 @@ nav {
 .nav-logo {
   font-family: 'Anton', sans-serif;
   font-size: 20px;
-  letter-spacing: 0.1em;
+  letter-spacing: -0.04em;
   color: var(--cream);
   text-decoration: none;
+  display: inline-block;
+  transform: scaleY(0.78);
+  transform-origin: center left;
 }
 
 .nav-links { display: flex; gap: 36px; list-style: none; }
@@ -210,11 +213,14 @@ nav {
 
 .hero-title .line-x {
   display: block;
-  font-size: clamp(48px, 8vw, 110px);
-  opacity: 0.5;
-  letter-spacing: 0.3em;
+  font-size: clamp(28px, 4vw, 56px);
+  opacity: 0.35;
+  letter-spacing: 0.1em;
   color: var(--cream);
-  margin: -8px 0;
+  margin: -24px 0;
+  position: relative;
+  z-index: 1;
+  left: 12px;
 }
 
 .hero-title .line-lanube {
@@ -595,8 +601,8 @@ nav {
 .about-title {
   font-family: 'Anton', sans-serif;
   font-size: clamp(60px, 9vw, 118px);
-  line-height: 0.84;
-  letter-spacing: 0.01em;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
   position: relative;
   z-index: 1;
 }
@@ -654,6 +660,36 @@ footer {
 /* REVEAL */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 768px) {
+  nav { padding: 18px 24px; }
+  .nav-links { gap: 20px; }
+  .nav-links a { font-size: 8px; }
+  .hero { padding: 0 24px 60px; }
+  .hero-title { margin-bottom: 32px; }
+  .hero-title .line-oushi { font-size: clamp(72px, 18vw, 160px); }
+  .hero-title .line-x { font-size: clamp(22px, 6vw, 48px); margin: -18px 0; }
+  .hero-title .line-lanube { font-size: clamp(72px, 18vw, 160px); }
+  .hero-bottom { flex-direction: column; align-items: flex-start; gap: 24px; }
+  .hero-scroll { display: none; }
+  .info-strip { grid-template-columns: 1fr 1fr; }
+  .info-cell { padding: 28px 24px; }
+  .section-lineup { padding: 64px 24px; }
+  .lineup-item { grid-template-columns: 80px 1fr; gap: 12px; }
+  .lineup-role { display: none; }
+  .lineup-artist { font-size: clamp(28px, 7vw, 48px); }
+  .section-actividades { padding: 64px 24px; grid-template-columns: 1fr; gap: 40px; }
+  .act-head { font-size: clamp(48px, 12vw, 80px); }
+  .section-entradas { padding: 64px 24px; }
+  .entradas-grid { grid-template-columns: 1fr 1fr !important; max-width: 100% !important; }
+  .entradas-title { font-size: clamp(48px, 12vw, 80px); }
+  .entrada-price { font-size: 52px; }
+  .section-about { padding: 64px 24px; grid-template-columns: 1fr; gap: 40px; }
+  .about-bg-num { display: none; }
+  .about-title { font-size: clamp(52px, 14vw, 96px); }
+  footer { padding: 40px 24px; flex-direction: column; gap: 20px; text-align: center; }
+  .footer-links { flex-wrap: wrap; justify-content: center; gap: 20px; }
+}
 </style>
 </head>
 <body>
@@ -683,7 +719,6 @@ footer {
   </div>
 
   <div class="hero-content">
-    <div class="hero-eyebrow">Buenos Aires · 13 de junio de 2026</div>
     <h1 class="hero-title futura">
       <span class="line-oushi">OUSHI</span>
       <span class="line-x">×</span>
@@ -743,7 +778,7 @@ footer {
     <li class="lineup-item">
       <span class="lineup-time">17:00hs</span>
       <span class="lineup-artist">Sol Porro</span>
-      <span class="lineup-role">Live</span>
+      <span class="lineup-role">DJ Set</span>
     </li>
     <li class="lineup-item">
       <span class="lineup-time">18:30hs</span>
@@ -773,12 +808,12 @@ footer {
     <div class="act-item">
       <span class="act-num">01</span>
       <span class="act-name">Flash Tattoo</span>
-      <span class="act-tag">Todo el día</span>
+      <span class="act-tag">Diseños exclusivos</span>
     </div>
     <div class="act-item">
       <span class="act-num">02</span>
       <span class="act-name">Feria de Vinilos</span>
-      <span class="act-tag">Nitewax · Flynn · Living Analógica</span>
+      <span class="act-tag">Nitewax · Flynn · Astro Discos</span>
     </div>
     <div class="act-item">
       <span class="act-num">03</span>
@@ -793,7 +828,7 @@ footer {
   <div class="entradas-grid" style="grid-template-columns: 1fr 1fr; max-width: 600px;">
     <div class="entrada-card">
       <span class="entrada-tier">Anticipadas</span>
-      <div class="entrada-price">$19K</div>
+      <div class="entrada-price">$20K</div>
       <span class="entrada-unit">pesos argentinos</span>
       <div class="entrada-qty">50 entradas</div>
     </div>
@@ -819,8 +854,8 @@ footer {
     </h2>
   </div>
   <div class="about-right">
-    <p>Oushi es un evento de día que fusiona <strong>jazz en vivo, DJs de vinilo y cultura analógica</strong> en uno de los espacios más grandes de Buenos Aires.</p>
-    <p>No es una fiesta con nombre. Es una curaduría — de música, de gente, de atmósfera. Cada edición tiene una razón de ser.</p>
+    <p>Oushi es una productora audiovisual que busca generar propuestas culturales a lo largo de la ciudad.</p>
+    <p>Cada evento es una excusa para cruzar disciplinas — música, imagen y espacio. No repetimos fórmulas: buscamos contextos nuevos, artistas que no se juntan solos y lugares que tienen algo para decir.</p>
     <p><strong>La Nube, Av. Costanera 2851.</strong> 10 horas de música continua, de día hasta la medianoche.</p>
     <p>Seguinos en <strong>@oushi.archives</strong></p>
   </div>
